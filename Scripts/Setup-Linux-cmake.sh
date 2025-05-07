@@ -2,8 +2,4 @@
 
 pushd ..
 Vendor/Premake/Linux/premake5 --cc=clang --file=premake5.lua cmake
-mkdir cmake-build
-pushd cmake-build
-cmake ../.
-popd
 popd
