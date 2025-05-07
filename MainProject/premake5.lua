@@ -1,4 +1,4 @@
-project "Project"
+project "MainProject"
     kind "ConsoleApp"
     language "C++"
     cppdialect "C++20"
@@ -9,7 +9,7 @@ project "Project"
 
     includedirs
     {
-        "../Core/CoreProject/"
+        "../Core/CoreProjectExample/"
     }
 
     links

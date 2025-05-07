@@ -5,7 +5,7 @@ require "premake-cmake/cmake"
 workspace "CPP-Template"
    architecture "x64"
    configurations { "Debug", "Release" }
-   startproject "Project"
+   startproject "MainProject"
 
    -- Workspace-wide build options for MSVC
    filter "toolset:msc"
@@ -14,10 +14,10 @@ workspace "CPP-Template"
 OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
 group "Core"
-	include "Core/CoreProject/"
+	include "Core/CoreProjectExample/"
 
 group "Dependencies"
     
 
 group ""
-    include "Project/"
+    include "MainProject/"
