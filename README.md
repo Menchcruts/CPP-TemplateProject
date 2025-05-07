@@ -34,21 +34,34 @@ cd Scripts
 ## 📁 Project Structure
 ```
 Cpp-TemplateProject/
-├─ Core/                    # Core libraries
-│  ├─ CoreProjectExample/       # Example library. Libraries have an outer folder for generated files and an inner folder for source
-│  │  ├─ CoreProject/               # Actual source library
-│  │  ├─ Premake5.lua               # Library premake file
-├─ Dependencies/            # Dependency libraries
-├─ MainProject/             # Main project directory
-│  ├─ Premake5.lua              # Main project Premake file
-├─ premake-cmake/           # CMake module for Premake
-├─ Scripts/                 
-├─ Vendor/                  # Premake binaries and example Premake files
-├─ .gitignore
-├─ LICENSE
-├─ premake5.lua             # Main workspace Premake file
-├─ README.MD
+├─ Core/
+│  ├─ CoreProjectExample/
+│  │  ├─ CoreProject/
+│  │  ├─ Premake5.lua
+├─ Dependencies/
+├─ MainProject/
+│  ├─ Premake5.lua
+├─ premake-cmake/
+├─ Scripts/
+├─ Vendor/
+├─ premake5.lua
 ```
+### 📘 Directory Overview
+* **Core/**: Contains reusable core libraries.
+    * **CoreProjectExample/**: Example of a library setup. Each library has an outer folder (for build files) and an inner folder (```CoreProject/```) with the actual source.
+    * ```premake5.lua```: Premake configuration for the example library.
+
+* **Dependencies/**: Placeholder for third-party dependencies (e.g., via Git submodules or external downloads). They are structured similarily to core libraries.
+
+* **MainProject/**: Your primary application or executable target.
+    * ```premake5.lua```: Premake configuration for the main project.
+* **premake-cmake/**: A CMake module that bridges CMake compatibility with Premake-generated builds.
+
+* **Scripts/**: Contains helper scripts to generate project files (e.g., ```Setup-Linux-cmake.sh```, ```Setup-Windows-cmake.bat```).
+
+* **Vendor/**: Stores Premake binaries and example scripts or boilerplate for reference.
+
+* ```premake5.lua``` (root): Main workspace configuration file for Premake.
 
 ---
 
@@ -60,7 +73,7 @@ Cpp-TemplateProject/
 ---
 
 ## 🧪 Customization
-You can modify the ```premake5.lua``` script to:
+You can modify the ```premake5.lua``` scripts to:
 * Add dependencies
 * Change compiler/linker settings
 * Configure additional projects or modules
