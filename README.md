@@ -22,14 +22,19 @@ This is a lightweight and flexible C++ project template designed to kickstart de
 cd Scripts
 ./Setup-Linux-cmake.sh      # For CMake
 ```
-> On Windows, use the ```.bat``` equivalents:
+> On Windows, use the `.bat` equivalents:
 ```bash
 cd Scripts
 ./Setup-Windows-cmake.bat   # For Visual Studio
 ./Setup-Windows-vs2022.bat  # For CMake
 ```
 
----
+## Changing Project Names
+Changing project names is as simple as going into the `premake5.lua` of the project and changing the project variable to whatever name you want.
+
+**Note:** if you change rename any folders, remember to change the path in the root `premake5.lua` file and any other project that depends on that project.
+
+Please refer to the [Premake docs](https://premake.github.io/docs/).
 
 ## 📁 Project Structure
 ```
@@ -48,20 +53,20 @@ Cpp-TemplateProject/
 ```
 ### 📘 Directory Overview
 * **Core/**: Contains reusable core libraries.
-    * **CoreProjectExample/**: Example of a library setup. Each library has an outer folder (for build files) and an inner folder (```CoreProject/```) with the actual source.
-    * ```premake5.lua```: Premake configuration for the example library.
+    * **CoreProjectExample/**: Example of a library setup. Each library has an outer folder (for build files) and an inner folder (`CoreProject/`) with the actual source.
+    * `premake5.lua`: Premake configuration for the example library.
 
 * **Dependencies/**: Placeholder for third-party dependencies (e.g., via Git submodules or external downloads). They are structured similarily to core libraries.
 
 * **MainProject/**: Your primary application or executable target.
-    * ```premake5.lua```: Premake configuration for the main project.
+    * `premake5.lua`: Premake configuration for the main project.
 * **premake-cmake/**: A CMake module that bridges CMake compatibility with Premake-generated builds.
 
-* **Scripts/**: Contains helper scripts to generate project files (e.g., ```Setup-Linux-cmake.sh```, ```Setup-Windows-cmake.bat```).
+* **Scripts/**: Contains helper scripts to generate project files (e.g., `Setup-Linux-cmake.sh`, `Setup-Windows-cmake.bat`).
 
 * **Vendor/**: Stores Premake binaries and example scripts or boilerplate for reference.
 
-* ```premake5.lua``` (root): Main workspace configuration file for Premake.
+* `premake5.lua` (root): Main workspace configuration file for Premake.
 
 ---
 
@@ -73,7 +78,7 @@ Cpp-TemplateProject/
 ---
 
 ## 🧪 Customization
-You can modify the ```premake5.lua``` scripts to:
+You can modify the `premake5.lua` scripts to:
 * Add dependencies
 * Change compiler/linker settings
 * Configure additional projects or modules
